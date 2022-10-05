@@ -16,15 +16,8 @@ public class TresEnRaya1
     {
         bool terminado = false;
 
-      
-        DibujarTablero();
-        do
-        {
-          
-          
-           
-            
-        } while (!terminado);
+ 
+
     }
     
     static void llenado (int jugador)
@@ -36,15 +29,15 @@ public class TresEnRaya1
 
     static void DibujarTablero()
     {
-        Console.WriteLine();
-        Console.WriteLine("-------------");
-        for (int fila = 0; fila < 3; fila++)
+     
+        for (int i=0; i<3; i++)
         {
-            Console.Write("|");
-            for (int columna = 0; columna < 3; columna++)
-                Console.Write(" {0} |", simbolo[tablero[fila, columna]]);
-            Console.WriteLine();
-            Console.WriteLine("-------------");
+            for(int j=0; j<3; j++)
+            {
+                Console.WriteLine();
+                Console.WriteLine(tablero[i,j]);
+            }
+
         }
     }
 
