@@ -21,14 +21,7 @@ public class TresEnRaya1
         DibujarTablero(tablero);
 
 
-        DibujarTablero();
-        do
-        {
-          
-          
-           
-            
-        } while (!terminado);
+       
     }
     
     static void llenado (int jugador)
