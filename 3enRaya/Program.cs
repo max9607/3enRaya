@@ -29,7 +29,16 @@ public class TresEnRaya1
     static void llenado (int jugador)
     {
         int fila, columna;
-       
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+               
+                Console.Write(m[i, j]);
+            }
+
+        }
+
 
     }
     static void DibujarTablero(char[,] m)
