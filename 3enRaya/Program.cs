@@ -17,30 +17,28 @@ public class TresEnRaya1
     {
         bool partida = false;
         char[,] tablero = new char[3, 3] { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
-        DibujarTablero(tablero);
-        
-        
-         
-
-
-   
-    }
-    
-    static void llenado (int jugador)
-    {
-        int fila, columna;
-        for (int i = 0; i < 3; i++)
+        //int[,] tablero = new int[3, 3] { { 1,2,3}, { 4,5,6}, { 7,8,9 } };
+        while(partida == false)
         {
-            for (int j = 0; j < 3; j++)
+            int x = 0;
+            int y = 0;
+            DibujarTablero(tablero);
+
+            do
             {
-               
-                Console.Write(m[i, j]);
-            }
+                Console.WriteLine("Escriba Coordenadas X");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Escriba Coordenadas Y");
+                y = Convert.ToInt32(Console.ReadLine());
+
+            } while (x > 2 || y > 2);
+
+
 
         }
-
-
+       
     }
+    
     static void DibujarTablero(char[,] m)
     {
         for(int i= 0; i < 3; i++)
