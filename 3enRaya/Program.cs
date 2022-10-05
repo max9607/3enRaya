@@ -18,9 +18,24 @@ public class TresEnRaya1
         bool partida = false;
         char[,] tablero = new char[3, 3] { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
         //int[,] tablero = new int[3, 3] { { 1,2,3}, { 4,5,6}, { 7,8,9 } };
-        DibujarTablero(tablero);
+        while(partida == false)
+        {
+            int x = 0;
+            int y = 0;
+            DibujarTablero(tablero);
+
+            do
+            {
+                Console.WriteLine("Escriba Coordenadas X");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Escriba Coordenadas Y");
+                y = Convert.ToInt32(Console.ReadLine());
+
+            } while (x > 2 || y > 2);
 
 
+
+        }
        
     }
     
