@@ -38,7 +38,11 @@ public class TresEnRaya1
         }
        
     }
-    
+    static void llenado(int x,int y, char[,] m)
+    {
+
+
+    }
     static void DibujarTablero(char[,] m)
     {
         for(int i= 0; i < 3; i++)
