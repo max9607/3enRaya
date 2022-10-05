@@ -6,9 +6,9 @@ using System;
 public class TresEnRaya1
 {
 
-  
-    
 
+
+    static int[,] tablero = new int[3, 3];
     static char[] simbolo = { ' ', 'O', 'X' };
 
 
@@ -32,6 +32,7 @@ public class TresEnRaya1
                 y = Convert.ToInt32(Console.ReadLine());
 
             } while (x > 2 || y > 2);
+            llenado(x, y, tablero);
 
 
 
@@ -40,7 +41,13 @@ public class TresEnRaya1
     }
     static void llenado(int x,int y, char[,] m)
     {
+        
+            
+                m[x, y]='x';
+            
+            
 
+        
 
     }
     static void DibujarTablero(char[,] m)
