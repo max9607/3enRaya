@@ -24,25 +24,9 @@ public class TresEnRaya1
        
     }
     
-    static void llenado (int jugador)
-    {
-        int fila, columna;
-       
-    }
- 
-
     static void DibujarTablero(char[,] m)
     {
-        /*Console.WriteLine();
-        Console.WriteLine("-------------");
-        for (int fila = 0; fila < 3; fila++)
-        {
-            Console.Write("|");
-            for (int columna = 0; columna < 3; columna++)
-                Console.Write(" {0} |", simbolo[tablero[fila, columna]]);
-            Console.WriteLine();
-            Console.WriteLine("-------------");
-        }*/
+   
         for(int i= 0; i < 3; i++)
         {
             for(int j= 0; j < 3; j++)
@@ -52,7 +36,7 @@ public class TresEnRaya1
             }
             Console.Write(" |");
             Console.WriteLine();
-            //hola
+            
         }
     }
 
