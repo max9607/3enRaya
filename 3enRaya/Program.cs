@@ -7,17 +7,28 @@ public class TresEnRaya1
 {
 
   
-    static int[,] tablero = new int[3, 3];
+    
+
     static char[] simbolo = { ' ', 'O', 'X' };
 
 
  
     public static void Main()
     {
-        bool terminado = false;
+        bool partida = false;
+        char[,] tablero = new char[3, 3] { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
+        //int[,] tablero = new int[3, 3] { { 1,2,3}, { 4,5,6}, { 7,8,9 } };
+        DibujarTablero(tablero);
 
- 
-
+      
+        DibujarTablero();
+        do
+        {
+          
+          
+           
+            
+        } while (!terminado);
     }
     
     static void llenado (int jugador)
@@ -27,17 +38,17 @@ public class TresEnRaya1
     }
  
 
-    static void DibujarTablero()
+    static void DibujarTablero(char[,] m)
     {
-     
-        for (int i=0; i<3; i++)
+        Console.WriteLine();
+        Console.WriteLine("-------------");
+        for (int fila = 0; fila < 3; fila++)
         {
-            for(int j=0; j<3; j++)
-            {
-                Console.WriteLine();
-                Console.WriteLine(tablero[i,j]);
-            }
-
+            Console.Write("|");
+            for (int columna = 0; columna < 3; columna++)
+                Console.Write(" {0} |", simbolo[tablero[fila, columna]]);
+            Console.WriteLine();
+            Console.WriteLine("-------------");
         }
     }
 
