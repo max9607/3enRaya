@@ -28,11 +28,11 @@ public class TresEnRaya1
             do
             {
                 Console.WriteLine("Escriba Coordenadas X");
-                x = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Escriba Coordenadas Y");
                 y = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Escriba Coordenadas Y");
+                x = Convert.ToInt32(Console.ReadLine());
 
-            } while (x > 2 || y > 2);
+            } while (x > 2 && y > 2);
             llenado(x, y, tablero);
             movimiento(tablero);
 
@@ -47,9 +47,9 @@ public class TresEnRaya1
         while (turno == false)
         {
             
-            int x = rd.Next(0, 2);
-            int y = rd.Next(0, 2);
-            if (m[x, y] == '-')
+            int x = rd.Next(0, 3);
+            int y = rd.Next(0, 3);
+            if (m[x, y] == '-' && m[x, y] != '0')
             {
                 m[x, y] = '0';
                 turno = true;
@@ -63,7 +63,7 @@ public class TresEnRaya1
     }
     static void DibujarTablero(char[,] m)
     {
-        Console.WriteLine("0----1----2");
+        Console.WriteLine("X 0--1--2   Y");
         for(int i= 0; i < 3; i++)
         {
             for(int j= 0; j < 3; j++)
