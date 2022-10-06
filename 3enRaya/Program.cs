@@ -52,6 +52,7 @@ public class TresEnRaya1
     }
     static void DibujarTablero(char[,] m)
     {
+        Console.WriteLine("0----1----2");
         for(int i= 0; i < 3; i++)
         {
             for(int j= 0; j < 3; j++)
@@ -59,10 +60,12 @@ public class TresEnRaya1
                 Console.Write("| ");
                 Console.Write(m[i,j]);
             }
-            Console.Write(" |");
+            Console.Write(" | "+i);
             Console.WriteLine();
+            
 
         }
+        
     }
     
 
