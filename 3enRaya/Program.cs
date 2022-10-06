@@ -43,9 +43,10 @@ public class TresEnRaya1
     static void movimiento(char[,] m)
     {
         bool turno = false;
-        while(turno == false)
+        Random rd = new Random();
+        while (turno == false)
         {
-            Random rd = new Random();
+            
             int x = rd.Next(0, 2);
             int y = rd.Next(0, 2);
             if (m[x, y] == '-')
