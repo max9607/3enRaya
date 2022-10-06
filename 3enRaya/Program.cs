@@ -22,6 +22,7 @@ public class TresEnRaya1
         {
             int x = 0;
             int y = 0;
+            Console.Clear();
             DibujarTablero(tablero);
 
             do
@@ -33,22 +34,31 @@ public class TresEnRaya1
 
             } while (x > 2 || y > 2);
             llenado(x, y, tablero);
-
+            movimiento(tablero);
 
 
         }
        
     }
+    static void movimiento(char[,] m)
+    {
+        bool turno = false;
+        while(turno == false)
+        {
+            Random rd = new Random();
+            int x = rd.Next(0, 2);
+            int y = rd.Next(0, 2);
+            if (m[x, y] == '-')
+            {
+                m[x, y] = '0';
+                turno = true;
+            }
+        }
+        
+    }
     static void llenado(int x,int y, char[,] m)
     {
-        
-            
-                m[x, y]='x';
-            
-            
-
-        
-
+           m[x, y]='x';
     }
     static void DibujarTablero(char[,] m)
     {
@@ -61,7 +71,6 @@ public class TresEnRaya1
             }
             Console.Write(" |");
             Console.WriteLine();
-
         }
     }
     
