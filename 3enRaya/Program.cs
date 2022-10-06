@@ -2,6 +2,7 @@
 
 
 using System;
+using System.Text.RegularExpressions;
 
 public class TresEnRaya1
 {
@@ -24,6 +25,7 @@ public class TresEnRaya1
             int y = 0;
             Console.Clear();
             DibujarTablero(tablero);
+           
 
             do
             {
@@ -35,10 +37,13 @@ public class TresEnRaya1
             } while (x > 2 && y > 2);
             llenado(x, y, tablero);
             movimiento(tablero);
-
-
+          
         }
-       
+        partida = ComprobarGanador();
+        if (partida)
+            Console.WriteLine("gano x");
+
+
     }
     static void movimiento(char[,] m)
     {
@@ -75,6 +80,38 @@ public class TresEnRaya1
             Console.WriteLine();
         }
         
+    }
+    static bool ComprobarGanador()
+    {
+        bool hay3enRaya = false;
+
+        for(int fila=0; fila<3; fila++)
+            if ((tablero[fila,0]== tablero[fila,1])
+                && (tablero[fila,0]== tablero[fila,2])
+                && (tablero[fila,0]!=0))
+                hay3enRaya=true;
+
+        for (int columna = 0; columna < 3; columna++)
+            if ((tablero[0, columna] == tablero[1, columna])
+                    && (tablero[0, columna] == tablero[2, columna])
+                    && (tablero[0, columna] != 0))
+                hay3enRaya = true;
+
+        // Y finalmente miro las dos diagonales
+        if ((tablero[0, 0] == tablero[1, 1])
+                && (tablero[0, 0] == tablero[2, 2])
+                && (tablero[0, 0] != 0))
+            hay3enRaya = true;
+        if ((tablero[0, 2] == tablero[1, 1])
+                && (tablero[0, 2] == tablero[2, 0])
+                && (tablero[0, 2] != 0))
+            hay3enRaya = true;
+
+
+
+        return hay3enRaya;
+
+
     }
     
 
